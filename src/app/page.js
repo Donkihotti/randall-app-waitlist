@@ -6,6 +6,7 @@ import Form from "./components/Form";
 
 export default function Home() {
   return (
+    <>
     <main className="w-screen h-screen bg-white p-5 overflow-hidden">
       <div className="absolute top-0 right-0 bg-gradient-to-r from-white to-secondary w-3/5 h-full"></div>
       <div className="h-1/8 w-full">
@@ -44,7 +45,20 @@ export default function Home() {
           className=""
           />
         </div>
-       
+        <div className="absolute bottom-3 left-3.5 flex flex-row gap-x-1">
+        <div className=" text-black border py-1 px-4 rounded-xs">
+            <p className="text-sm">contact@randallapp.com</p>
+        </div>
+        <div className="py-1 px-2 border rounded-xs flex items-center border-black justify-center">
+          <Image 
+          src={"Arrow_Right.svg"}
+          alt="arrow long right up"
+          width={15}
+          height={15}
+          />
+        </div>
+        </div>
     </main>
+    </>
   );
 }
