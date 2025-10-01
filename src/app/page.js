@@ -12,8 +12,8 @@ export default function Home() {
       <div className="h-1/8 w-full">
         <Logo />
       </div>
-        <div className="flex flex-row w-full md:w-1/3 gap-x-5 text-center md:text-left md:ml-28">
-          <div className="relative h-[270px] w-[180px] hidden md:block">
+        <div className="flex flex-row w-full md:w-2/5 gap-x-5 text-center md:text-left md:ml-28">
+          <div className="relative h-[270px] w-[240px] hidden md:block">
           <Image 
           src={"/bull-2.png"}
           alt="pixelated bull"
