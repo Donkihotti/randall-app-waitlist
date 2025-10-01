@@ -53,26 +53,29 @@ async function handleSubmit(e) {
   }
 
     return (
-    <div className="flex flex-row h-80 gap-x-3 w-1/2 z-20">
-        <div className="bg-main h-full w-16"></div>
-        <form onSubmit={handleSubmit} className="w-4/6 bg-main px-5 py-3 flex flex-col justify-between">
+    <div className="flex flex-row h-60 md:h-80 gap-x-3 w-screen md:w-1/2 z-20">
+        <div className="bg-main h-full w-0 md:w-16 hidden md:block"></div>
+        <form onSubmit={handleSubmit} className="w-full md:w-4/6 bg-main px-5 py-3 flex flex-col justify-between">
             <div className="flex flex-row gap-x-4 items-center">
-                <h2 className="text-big font-instrument pointer-events-none leading-20">Early access form</h2>
-                <Image 
-                src={"/arrow-long-right.svg"}
-                alt="arrow long right minimal"
-                width={51}
-                height={51}
+                <h2 className="text-2xl md:text-big font-instrument pointer-events-none md:leading-20">Early access form</h2>
+                <div className="relative w-8 h-8 md:w-14 md:h-14">
+                <Image
+                  src="/arrow-long-right.svg"
+                  alt="arrow long right minimal"
+                  fill
+                  className="object-contain"
+                  sizes="(min-width: 768px) 56px, 40px"
                 />
+              </div>
             </div>
-        <div className="flex flex-col mb-5 text-white">
+        <div className="flex flex-col mb-5 text-white text-sm md:text-xl w-full">
             <label className="block mb-2">
             <input
                 required
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block w-2/3 border-b px-2 py-2 waitlist-input"
+                className="mt-1 block md:w-2/3 w-full border-b px-2 py-2 waitlist-input"
                 placeholder="Enter your email"
             />
             </label>
@@ -81,7 +84,7 @@ async function handleSubmit(e) {
                 type="text"
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
-                className="mt-1 block w-2/3 border-b px-2 py-2 waitlist-input"
+                className="mt-1 block w-full md:w-2/3 border-b px-2 py-2 waitlist-input"
                 placeholder="Role at company (Optional)"
             />
             </label>
@@ -93,16 +96,16 @@ async function handleSubmit(e) {
           <input name="website" />
         </div>
         <div className="flex flex-row w-full justify-between">
-            <p className="text-xs pointer-events-none">We’ll only use this email for invites and <br/> product updates. Privacy respected.</p>
-            <div className="flex flex-row gap-x-1">
+            <p className="text-[8px] md:text-xs pointer-events-none">We’ll only use this email for invites and <br className="hidden md:block"/> product updates. Privacy respected.</p>
+            <div className="flex flex-row md:gap-x-1">
             <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center px-4 py-1 rounded-xs border border-white text-white disabled:opacity-60 hover:cursor-pointer hover:bg-white hover:text-black transition-colors duration-150"
+            className="whitespace-nowrap inline-flex items-center px-2 md:px-4 py-1 rounded-xs text-xs md:text-sm border border-white text-white disabled:opacity-60 hover:cursor-pointer hover:bg-white hover:text-black transition-colors duration-150"
             >
             {loading ? "Joining…" : "Join waitlist"}
             </button>
-            <div className="py-1 px-2 border rounded-xs flex items-center justify-center">
+            <div className="py-1 px-2 border rounded-xs items-center justify-center hidden md:flex">
                 <Image 
                 src={"arrow-long-up-left.svg"}
                 alt="arrow long right up"

@@ -12,8 +12,8 @@ export default function Home() {
       <div className="h-1/8 w-full">
         <Logo />
       </div>
-        <div className="flex flex-row w-1/3 gap-x-5 ml-28">
-          <div className="relative h-[270px] w-[180px]">
+        <div className="flex flex-row w-full md:w-1/3 gap-x-5 text-center md:text-left md:ml-28">
+          <div className="relative h-[270px] w-[180px] hidden md:block">
           <Image 
           src={"/bull-2.png"}
           alt="pixelated bull"
@@ -21,23 +21,24 @@ export default function Home() {
           className="object-cover"
           />
           </div>
-          <div className="flex flex-col text-black justify-center pointer-events-none z-20">
-            <h2 className="font-instrument text-big leading-14">Randall, <br/> purposeful craft <br/> over gimmicks.</h2>
-            <div className="flex flex-row gap-x-2 text-medium leading-6 tracking-tight mt-3">
-              <p>join the waitlist for early access</p>
+          <div className="flex flex-col text-black w-full justify-center pointer-events-none z-20">
+            <h2 className="font-instrument text-2xl leading-6 md:leading-14 md:text-big">Create photoshoots without touching <br className="hidden md:block"/>a camera.</h2>
+            <div className="flex flex-col md:flex-row gap-x-2 w-full text-sm text-center md:text-left md:text-medium md:leading-6 tracking-tight mt-1 md:mt-3">
+              <p>Join the waitlist for early access</p>
               <Image 
               src={"/arrow-long-down-left.svg"}
               alt="arrow right"
               width={22}
               height={22}
+              className="hidden md:block"
               />
             </div>
           </div>
         </div>
-        <div className="w-full flex items-end justify-end mt-22">
+        <div className="w-full flex items-end justify-end mt-12 md:mt-22">
          <Form />
         </div>
-        <div className="h-full w-1/2 absolute right-0 top-0">
+        <div className="h-full w-5/6 md:w-1/2 absolute md:mb-0 mb-48 right-0 top-0">
           <Image 
           src={"/bull-4.svg"}
           alt="bull pixelated"
@@ -45,9 +46,9 @@ export default function Home() {
           className=""
           />
         </div>
-        <div className="absolute bottom-3 left-3.5 flex flex-row gap-x-1">
+        <div className="absolute bottom-3 left-5 flex flex-row gap-x-1">
         <div className=" text-black border py-1 px-4 rounded-xs">
-            <p className="text-sm">contact@randallapp.com</p>
+            <p className="text-xs md:text-sm">contact@randallapp.com</p>
         </div>
         <div className="py-1 px-2 border rounded-xs flex items-center border-black justify-center">
           <Image 

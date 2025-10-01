@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Logo () { 
     return ( 
-        <div className="w-24 h-8 absolute top-5 left-5">
+        <div className="md:w-24 md:h-8 w-16 h-5 absolute top-2 left-2 md:top-5 md:left-5">
             <Image
             src={"/logo.svg"}
             alt="Randall Logo"
